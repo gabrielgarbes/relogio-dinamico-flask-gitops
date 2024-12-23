@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: relogio-dinamico-flask
+  labels:
+    app: relogio-dinamico-flask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: relogio-dinamico-flask
+  template:
+    metadata:
+      labels:
+        app: relogio-dinamico-flask
+    spec:
+      containers:
+        - name: relogio-dinamico-flask
+          image: quay.io/rh-ee-ggalvaog/relogio-dinamico-flask:${{ next_tag }}
+          ports:
+            - containerPort: 5000
