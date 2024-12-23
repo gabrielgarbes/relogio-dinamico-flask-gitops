@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: relogio-dinamico-flask
-          image: quay.io/rh-ee-ggalvaog/relogio-dinamico-flask:v1.0.1
+          image: quay.io/rh-ee-ggalvaog/relogio-dinamico-flask:v1.0.0
           ports:
             - containerPort: 5000
